@@ -1,4 +1,4 @@
 <h3>Beaches: </h3>
-<a ng-repeat="beach in vm.beaches" href="#" ui-sref="beaches.detail({ beachId: beach.id })" ng-bind="beach.name"></a>
+<a ng-repeat="beach in vm.beaches" href="#" ui-sref="beaches.detail({ beachTitle: vm.replaceSpaces(beach.title), beachId: beach.id })" ng-bind="beach.title">Hi</a>
 
 <ui-view></ui-view>

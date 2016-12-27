@@ -25,16 +25,15 @@
                             templateUrl: 'navbar/navbar.html'
                         },
                         content: {
-                            templateUrl: 'beaches/beaches.html'
+                            templateUrl: 'beaches/beaches.html',
+                            controller: 'BeachesController as vm'
                         }
-                    }
+                    },
                 })
                 .state('beaches.detail', {
-                    url: '/beaches/:beachId',
+                    url: '/:beachTitle',
                     templateUrl: 'beaches/detail.html',
-                    controller: function($stateParams) {
-                        console.log($stateParams)
-                    }
+                    controller: 'BeachesController as vm'
                 })
 
 
