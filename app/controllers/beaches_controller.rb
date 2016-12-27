@@ -1,5 +1,5 @@
 class BeachesController < ApplicationController
-  before_action :set_beach
+  before_action :set_beach, only: [:show, :edit, :destroy]
 
   def index
     render json: Beach.all
@@ -30,6 +30,13 @@ class BeachesController < ApplicationController
     end
   end
 
+  def destroy
+    if @beach.destroy
+      render json: { message: "#{@beach.title} was successfully deleted!" }
+    else
+      render json: { error: "The was an issue deleting this beach!" }
+    end
+  end
 
   private
 
