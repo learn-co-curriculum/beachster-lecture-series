@@ -18,7 +18,18 @@
                         }
                     }
                 })
-                
+                .state('beaches', {
+                    url: '/beaches',
+                    views: {
+                        nav: {
+                            templateUrl: 'navbar/navbar.html'
+                        },
+                        content: {
+                            templateUrl: 'beaches/beaches.html'
+                        }
+                    }
+                })
+
 
             // routes invalid routes to root url /
             $urlRouterProvider.otherwise('/')

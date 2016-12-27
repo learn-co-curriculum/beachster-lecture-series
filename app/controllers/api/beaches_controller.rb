@@ -1,4 +1,4 @@
-class BeachesController < ApplicationController
+class Api::BeachesController < ApplicationController
   before_action :set_beach, only: [:show, :edit, :destroy]
 
   def index
