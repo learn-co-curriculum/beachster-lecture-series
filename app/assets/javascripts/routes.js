@@ -29,6 +29,13 @@
                         }
                     }
                 })
+                .state('beaches.detail', {
+                    url: '/beaches/:beachId',
+                    templateUrl: 'beaches/detail.html',
+                    controller: function($stateParams) {
+                        console.log($stateParams)
+                    }
+                })
 
 
             // routes invalid routes to root url /
