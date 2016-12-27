@@ -3,7 +3,7 @@
 
     angular
         .module('beachster')
-        .controller('BeachesController', ['$stateParams', function($stateParams) {
+        .controller('BeachesListController', ['$stateParams', function($stateParams) {
 
             var vm = this
 
@@ -45,6 +45,8 @@
             function replaceSpaces(string) {
                 return string.replace(/\s/g, '-')
             }
+
+
         }])
 
 }())

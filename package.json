@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/learn-co-curriculum/beachster-lecture-series#readme",
   "dependencies": {
-    "angular": "^1.6.1",
+    "angular": "1.5.8",
     "angular-ui-router": "^0.3.2"
   }
 }

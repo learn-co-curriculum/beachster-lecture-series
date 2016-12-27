@@ -26,14 +26,14 @@
                         },
                         content: {
                             templateUrl: 'beaches/beaches.html',
-                            controller: 'BeachesController as vm'
+                            controller: 'BeachesListController as vm'
                         }
                     },
                 })
                 .state('beaches.detail', {
                     url: '/:beachTitle',
                     templateUrl: 'beaches/detail.html',
-                    controller: 'BeachesController as vm'
+                    controller: 'BeachDetailController as vm'
                 })
 
 
