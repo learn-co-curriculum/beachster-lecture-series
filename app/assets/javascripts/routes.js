@@ -39,13 +39,15 @@
 
 
             // routes invalid routes to root url /
-            $urlRouterProvider.otherwise('/')
+            $urlRouterProvider
+                .otherwise('/')
 
             // remove # from url Routes
-            $locationProvider.html5Mode({
-                enabled: true,
-                requireBase: false
-            });
+            $locationProvider
+                .html5Mode({
+                    enabled: true,
+                    requireBase: true
+                })
 
         }])
 
