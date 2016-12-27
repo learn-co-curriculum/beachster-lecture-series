@@ -19,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/learn-co-curriculum/beachster-lecture-series/issues"
   },
-  "homepage": "https://github.com/learn-co-curriculum/beachster-lecture-series#readme"
+  "homepage": "https://github.com/learn-co-curriculum/beachster-lecture-series#readme",
+  "dependencies": {
+    "angular": "^1.6.1",
+    "angular-ui-router": "^0.3.2"
+  }
 }
