@@ -3,9 +3,7 @@
 
     angular
         .module('beachster')
-        .config(['$locationProvider', '$stateProvider', '$urlRouterProvider', function($locationProvider, $stateProvider, $routeProvider) {
-            // remove # from url Routes
-            $locationProvider.html5Mode(true);
+        .config(['$locationProvider', '$stateProvider', '$urlRouterProvider', function($locationProvider, $stateProvider, $urlRouterProvider) {
 
             // State routes
             $stateProvider
@@ -20,10 +18,16 @@
                         }
                     }
                 })
+                
 
             // routes invalid routes to root url /
             $urlRouterProvider.otherwise('/')
 
+            // remove # from url Routes
+            $locationProvider.html5Mode({
+                enabled: true,
+                requireBase: false
+            });
 
         }])
 
