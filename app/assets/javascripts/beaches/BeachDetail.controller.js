@@ -3,7 +3,7 @@
 
     angular
         .module('beachster')
-        .controller('BeachDetailController', ['$stateParams', 'BeachFactory', '$state' function($stateParams, BeachFactory, $state) {
+        .controller('BeachDetailController', ['$stateParams', 'BeachFactory', '$state', function($stateParams, BeachFactory, $state) {
 
             var vm = this
             vm.deleteBeach = deleteBeach
@@ -21,7 +21,7 @@
 
                 function doSomething(message) {
                     alert(message)
-                    $state.go('beaches')
+                    $state.reload('beaches')
                 }
             }
 
