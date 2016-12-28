@@ -1,6 +1,6 @@
 <div class="side-bar">
   <h3>Beaches: </h3>
-  <a ng-repeat="beach in vm.beaches" href="#" ng-click="vm.getBeach(beach.id)" ui-sref="beaches.detail({ beachTitle: vm.replaceSpaces(beach.title), beachId: beach.id })">
+  <a ng-repeat="beach in vm.beaches" href="#" ui-sref="beaches.detail({ beachTitle: vm.replaceSpaces(beach.title), beachId: beach.id })">
     <div>
       <h4 ng-bind="beach.title"></h4>
     </div>

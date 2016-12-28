@@ -1,2 +1,8 @@
 <h1 ng-bind="vm.beach.title"></h1>
+<h3 ng-bind="vm.beach.city"></h3>
+<h3 ng-bind="vm.beach.state"></h3>
 <img src="{{ vm.beach.photo_url }}" alt="{{ vm.beach.title }}" height="200" width="300" />
+<p>
+  Rating: <span ng-bind="vm.beach.rating"></span>
+</p>
+<button ng-click="vm.deleteBeach(vm.beach.id)">Delete</button>

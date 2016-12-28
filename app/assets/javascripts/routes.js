@@ -31,7 +31,7 @@
                     },
                 })
                 .state('beaches.detail', {
-                    url: '/:beachTitle',
+                    url: '/:beachTitle?beachId',
                     templateUrl: 'beaches/detail.html',
                     controller: 'BeachDetailController as vm'
                 })

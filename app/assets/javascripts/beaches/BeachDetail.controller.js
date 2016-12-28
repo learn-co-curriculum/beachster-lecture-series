@@ -3,11 +3,28 @@
 
     angular
         .module('beachster')
-        .controller('BeachDetailController', ['$stateParams', function($stateParams) {
+        .controller('BeachDetailController', ['$stateParams', 'BeachFactory', '$state' function($stateParams, BeachFactory, $state) {
 
             var vm = this
+            vm.deleteBeach = deleteBeach
 
-            vm.beach = { title: 'Beaches are coming', photo_url: "http://captainkimo.com/wp-content/uploads/2014/08/Florida-Beach-Sunrise-Beach-Park-Jupiter-Island.jpg" }
+            BeachFactory.getBeach($stateParams.beachId)
+                        .then(setBeach)
+
+            function setBeach(data) {
+                vm.beach = data
+            }
+
+            function deleteBeach(beachId) {
+                return BeachFactory.deleteBeach(beachId)
+                                   .then(doSomething)
+
+                function doSomething(message) {
+                    alert(message)
+                    $state.go('beaches')
+                }
+            }
+
 
         }])
 
